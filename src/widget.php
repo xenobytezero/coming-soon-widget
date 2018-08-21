@@ -18,7 +18,7 @@ class Widget extends \WP_Widget {
         parent::__construct(false, $name = __('Coming Soon Widget', 'coming_soon_widget') );
 
         // Register the resources for this widget
-        add_action('init', array( $this, 'load_widget_resources' ));
+        //add_action('init', array( $this, 'load_widget_resources' ));
     }
 
     // --------------------------------------------------------------------
@@ -35,7 +35,6 @@ class Widget extends \WP_Widget {
 
         // get the values mixed with the defaults
         $opts = wp_parse_args($instance, $this->default_args);
-
 
         $available_templates = \WidgetSupport\TemplateDiscovery::find_templates(
             Common::get_custom_template_base()
@@ -55,7 +54,6 @@ class Widget extends \WP_Widget {
         echo "<hr/>";
 
         \WidgetSupport\Form::render_form_select($this, 'template', 'Template', $opts, $template_opts);
-
 
     }
 
@@ -106,23 +104,11 @@ class Widget extends \WP_Widget {
 
     // widget update
     function update($new_instance, $old_instance) {
-
         $ids = array('title', 'max_items', 'template');
-
         return \WidgetSupport\Form::save_options($new_instance, $old_instance, $ids);
-
     }
     
     // --------------------------------------------------------------------
 
-
-
-
-
 }
-
-
-
-
-
 ?>

@@ -26,13 +26,14 @@ License:
   
 */
 
-include 'vendor/autoload.php';
+require_once('vendor/autoload.php');
 
-include_once('src/Common.php');
-include_once('src/Widget.php');
+require_once('src/Common.php');
+require_once('src/Widget.php');
 
 // ----------------------------------------------------------------
 // Timber/Twig Setup
+
 
 // add namespace for templates
 add_filter('timber/loader/loader', function($loader){
@@ -49,4 +50,3 @@ add_action('widgets_init', function() {
 });
 
 ?>
-
