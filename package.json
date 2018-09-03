@@ -1,0 +1,15 @@
+{
+  "name": "coming-soon-widget",
+  "version": "1.4.0",
+  "main": "index.js",
+  "repository": "https://github.com/xenobytezero/coming-soon-widget.git",
+  "author": "<xenobytezero@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "^1.0.3",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-exec": "^3.0.0",
+    "grunt-replace": "^1.0.1"
+  }
+}
